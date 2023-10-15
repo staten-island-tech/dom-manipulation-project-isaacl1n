@@ -1,0 +1,26 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+#header {
+    text-align: center;
+    color: whitesmoke;
+    background-image: url(https://t3.ftcdn.net/jpg/02/18/02/54/360_F_218025408_vAqShwhdxe2wU9WF9YjEYg62sbCQEGMz.webp);
+    background-size: cover;
+    border-bottom: solid thick black;
+    font-family: 'Lato', sans-serif;
+    font-size: xx-large;
+    padding-top: 100px; padding-bottom: 100px;
+}
+#form {
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    padding-top: 50px; padding-bottom: 50px;
+}
+    .form-input {
+        margin: 5px;
+    }
+    #submit-button {
+        margin-top: 25px;
+    }
