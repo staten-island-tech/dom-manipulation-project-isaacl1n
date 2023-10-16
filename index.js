@@ -7,5 +7,5 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    console.log(DOMSelectors.firstName.value);
+    console.log(DOMSelectors.form.value);
 });
