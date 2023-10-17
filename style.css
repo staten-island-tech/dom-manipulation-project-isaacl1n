@@ -25,3 +25,9 @@ body {
         margin-top: 20px;
         font-family: 'Open Sans', sans-serif;
     }
+#tasks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    max-width: 80%;
+}
