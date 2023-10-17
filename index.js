@@ -13,3 +13,7 @@ DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     console.log(DOMSelectors.taskName.value);
 });
+
+DOMSelectors.taskName.value = "";
+DOMSelectors.taskDescription.value = "";
+DOMSelectors.dueDate.value = "";
