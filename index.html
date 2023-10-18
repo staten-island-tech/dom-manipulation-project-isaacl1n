@@ -20,23 +20,17 @@
     </div>
     <form id="form">
         <label for="task-name">Task Name:</label><br>
-            <input type="text" name="task-name" class="form-input" id="task-name">
+            <input type="text" name="task-name" maxlength="20" class="form-input" id="task-name">
         <br>
         <label for="task-desc">Task Description:</label><br>
-            <textarea name="task-desc" class="form-input" id="task-desc"></textarea>
+            <textarea name="task-desc" rows="5" cols="50" maxlength="200" placeholder="200 character max length" class="form-input" id="task-desc"></textarea>
         <br>
         <label for="due-date">Task Due Date:</label><br>
             <input type="datetime-local" name="due-date" class="form-input" id="due-date">
         <br>
         <input type="submit" value="Enter Task" id="submit-button">
     </form>
-    <div id="tasks">
-        <div class="task-card">
-            <h2 class="task-name">Task Name</h2>
-            <p class="task-desc">Task Description</p>
-            <p class="due-date">Due Date</p>
-        </div>
-    </div>
+    <div id="tasks"></div>
     <script src="index.js"></script>
 </body>
 </html>

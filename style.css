@@ -34,7 +34,31 @@ body {
 }
     .task-card {
         flex: 0 0 50%;
-        max-height: 20%; max-width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        max-height: 30%; max-width: 30%;
         border: solid darkgray thin;
         border-radius: 10px;
+        margin-bottom: 2vw;
     }
+        .task-name {
+            text-align: center;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .task-desc {
+            margin-left: 10px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .due-date {
+            margin-top: auto;
+            text-align: center;
+            color: red;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .remove-button {
+            margin-top: auto;
+            margin-left: 50%; transform: translate(-50%);
+            margin-bottom: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
