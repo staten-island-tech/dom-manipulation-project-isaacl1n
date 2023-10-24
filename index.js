@@ -19,27 +19,29 @@ DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     const taskName = DOMSelectors.taskName.value;
     const taskDesc = DOMSelectors.taskDescription.value;
-
     const dueDateValue = DOMSelectors.dueDate.value;
-    const dueDate = new Date(dueDateValue);
-    const formattedDueDate = dueDate.toLocaleDateString() + ", " + dueDate.toLocaleTimeString();
+        const dueDate = new Date(dueDateValue);
+        const formattedDueDate = dueDate.toLocaleDateString() + ", " + dueDate.toLocaleTimeString();
 
-    DOMSelectors.
-
-    // const taskCard = document.createElement("div");
-    // taskCard.classList.add("task-card");
-    // taskCard.innerHTML = `
-    //     <h2 class="task-name">${taskName}</h2>
-    //     <p class="task-desc">${taskDesc}</p>
-    //     <h4 class="due-date">Due: ${formattedDueDate}</h4>
-    //     <button type="button" class="remove-button">I'm finished with this task.</button>
-    // `;
-    // DOMSelectors.taskList.appendChild(taskCard);
+    DOMSelectors.taskList.insertAdjacentHTML(
+        "afterbegin",
+        `
+            <div class="task-card">
+                <h2 class="task-name">${taskName}</h2>
+                <p class="task-desc">${taskDesc}</p>
+                <h4 class="due-date">Due: ${formattedDueDate}</h4>
+                <button type="button" class="remove-button">I'm finished with this task.</button>
+            </div>
+        `
+    );
 
     clear();
 
-    const removeButton = taskCard.querySelector(".remove-button");
-    removeButton.addEventListener("click", function() {
-        taskCard.remove();
+    const removeButton = document.querySelectorAll(".remove-button");
+    removeButton.forEach(button => {
+        button.addEventListener("click", function(event) {
+            event.preventDefault();
+            event.target.parentElement.remove();
+        });
     });
 });
