@@ -9,14 +9,7 @@ const DOMSelectors = {
     dueDate: document.getElementById("due-date"),
 }
 
-function clear() {
-    DOMSelectors.taskName.value = "";
-    DOMSelectors.taskDescription.value = "";
-    DOMSelectors.dueDate.value = "";
-}
-
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
+function enterTask() {
     const taskName = DOMSelectors.taskName.value;
     const taskDesc = DOMSelectors.taskDescription.value;
     const dueDateValue = DOMSelectors.dueDate.value;
@@ -34,9 +27,13 @@ DOMSelectors.form.addEventListener("submit", function(event){
             </div>
         `
     );
-
-    clear();
-
+}
+function clear() {
+    DOMSelectors.taskName.value = "";
+    DOMSelectors.taskDescription.value = "";
+    DOMSelectors.dueDate.value = "";
+}
+function remove() {
     const removeButton = document.querySelectorAll(".remove-button");
     removeButton.forEach(button => {
         button.addEventListener("click", function(event) {
@@ -44,4 +41,11 @@ DOMSelectors.form.addEventListener("submit", function(event){
             event.target.parentElement.remove();
         });
     });
+}
+
+DOMSelectors.form.addEventListener("submit", function(event){
+    event.preventDefault();
+    enterTask();
+    clear();
+    remove();
 });
